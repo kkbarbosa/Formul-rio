@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade04</title>
+</head>
+
+<body background="img/vecteezy_abstract-dark-green-background-abstract-green-background_.jpg">
+
+    <p align="center"><img src="img/localiza.png" alt="localiza" width="250" height="50"/></p>
+
+    <table align="center" width="600" bgcolor="#4F7942">
+        <tr>
+            <td>
+                <fieldset>
+                    <legend><strong>Informações da Pessoa</strong></legend>
+                    <form action="save.php" method="post" name="cadastro">
+                        <table cellspacing="5" cellpadding="5">
+                            <tr>
+                                <td><label>Nome:</label></td>
+                                <td><input type="text" id="nomePessoa" name="nomePessoa" placeholder="Nome completo" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>CPF:</label></td>
+                                <td><input type="number" id="cfp" name="cfp" placeholder="XXX.XXX.XXX-XX" max="11" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Telefone:</label></td>
+                                <td><input type="text" id="tel" name="tel" size="30" maxlength="15" placeholder="(XX) XXXXX-XXXX" required /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Email:</label></td>
+                                <td><input type="email" id="mail" name="mail" size="30" maxlength="60" placeholder="Digite seu email" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Data de Nascimento:</label></td>
+                                <td><input type="date" id="data_nasc" name="data_nasc" min="1950-01-01" max="2006-12-01" required /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Idade:</label></td>
+                                <td><input type="number" id="idade" name="idade" min="1" max="99" required /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Sexo:</label></td>
+                                <td>
+                                    <label><input type="radio" id="sexoM" name="sexo" value="M" required /></label>
+                                        <label>Masculino</label><br />
+                                    <label><input type="radio" id="sexoF" name="sexo" value="F" required /></label>
+                                        <label>Feminino</label><br />
+                                    <label><input type="radio" id="sexoO" name="sexo" value="O" required /></label>
+                                        <label>Outro</label>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <legend><strong>Informações do Veículo</strong></legend>
+                        <table cellspacing="5" cellpadding="5">
+                            <tr>
+                                <td><label>Marca:</label></td>
+                                <td><input type="text" id="marca" name="marca" placeholder="Marca do veículo" size="30" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Tipo:</label></td>
+                                <td>
+                                    <label><input type="radio" id="tipoHatch" name="tipo" value="H" required /></label>
+                                        <label>Hatch</label><br />
+                                    <label><input type="radio" id="tipoSedan" name="tipo" value="S" required /></label>
+                                        <label>Sedan</label><br />
+                                    <label><input type="radio" id="tipoSUV" name="tipo" value="U" required /></label>
+                                        <label>SUV</label><br />
+                                    <label><input type="radio" id="tipoCupe" name="tipo" value="C" required /></label>
+                                        <label>Cupê</label><br />
+                                    <label><input type="radio" id="tipoEsportivo" name="tipo" value="E" required /></label>
+                                        <label>Esportivo</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="modelo">Modelo:</label></td>
+                                <td><input type="text" id="modelo" name="modelo" required /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Placa:</label></td>
+                                <td><input type="text" id="placa" name="placa" size="30" maxlength="7" placeholder="XXXXXXX" required /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="chassi">Numeração Chassi:</label></td>
+                                <td><input type="number" id="chassi" name="chassi" max="17" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Data de Fabricação:</label></td>
+                                <td><input type="month" id="fab" name="fab" min="1950-01" max="2024-12"/></td>
+                            </tr>
+                            <tr>
+                                <td><label>Data do Aluguel:</label></td>
+                                <td><input type="date" id="dataHora" name="dataHora" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Cor do veículo:</label></td>
+                                <td><input type="color" id="cor" name="cor"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Estado do Veículo:</label></td>
+                                <td>
+                                    <label><input type="checkbox" id="estadoPerfeito" name="estadoVei" value="Perfeito" />Perfeito</label><br />
+                                    <label><input type="checkbox" id="estadoBom" name="estadoVei" value="Bom" />Bom</label><br />
+                                    <label><input type="checkbox" id="estadoRuim" name="estadoVei" value="Ruim" />Ruim</label><br />
+                                    <label><input type="checkbox" id="estadoPessimo" name="estadoVei"value="Péssimo" /> Péssimo</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Estado:</label></td>
+                                <td>
+                                    <select id="estado" name="estado" required>
+                                        <option value="" selected="selected">--Selecione--</option>
+                                        <optgroup label="Norte">
+                                            <option value="AC">Acre</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="TO">Tocantins</option>
+                                        </optgroup>
+                                        <optgroup label="Nordeste">
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="SE">Sergipe</option>
+                                        </optgroup>
+                                        <optgroup label="Centro-Oeste">
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                        </optgroup>
+                                        <optgroup label="Sudeste">
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="SP">São Paulo</option>
+                                        </optgroup>
+                                        <optgroup label="Sul">
+                                            <option value="PR">Paraná</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="SC">Santa Catarina</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>comentario:</label></td>
+                                <td><textarea id="coment" name="comentario" cols="40" rows="6" maxlength="240" placeholder="Digite seu comentário" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label>Fotos:</label></td>
+                                <td><input type="file" id="fotos" name="anexar" /></td>
+                            </tr>
+                            <tr>
+                                    <td colspan="2" align="center">
+                                    <input type="submit" id="enviar" name="enviar" value="ENVIAR" />
+                                    <input type="reset" id="limpar" name="limpar" value="CANCELAR" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+</html> 
